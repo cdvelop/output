@@ -1,48 +1,45 @@
 package output
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
-// "github.com/fatih/color"
+var format_color string
 
-// opt: ok,err,warn,info
-func printNEW(opt, message string, a ...interface{}) {
-
-	// switch opt {
-	// case "ok":
-	// 	color.Green(message, a...)
-	// case "err":
-	// 	color.Red(message, a...)
-	// case "warn":
-	// 	color.Yellow(message, a...)
-	// case "info":
-	// 	color.Cyan(message, a...)
-	// default:
-	// 	color.White(message, a...)
-	// }
-
-	// color.Unset()
+func init() {
+	for _, arg := range os.Args {
+		if arg == "dev" {
+			format_color = "\033[%sm%s\033[0m"
+		}
+	}
 }
 
 // options: ok,err,warn,info
 func print(message string, options ...string) {
-	var color string
+	if format_color == "" {
+		fmt.Print(message)
+	} else {
 
-	for _, opt := range options {
-		switch opt {
-		case "ok":
-			color = "32" //green
-		case "err":
-			color = "31" //red
-		case "warn":
-			color = "33" //yellow
-		case "info":
-			color = "36" //magenta blue=34
-		default:
-			color = "0"
+		var color string
+
+		for _, opt := range options {
+			switch opt {
+			case "ok":
+				color = "32" //green
+			case "err":
+				color = "31" //red
+			case "warn":
+				color = "33" //yellow
+			case "info":
+				color = "36" //magenta blue=34
+			default:
+				color = "0"
+			}
 		}
-	}
 
-	fmt.Printf("\033[%sm%s\033[0m", color, message)
+		fmt.Printf(format_color, color, message)
+	}
 }
 
 func PrintOK(message string) {
