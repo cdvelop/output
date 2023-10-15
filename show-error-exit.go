@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func ShowErrorAndExit(message interface{}) {
+func ShowErrorAndExit(message any) {
 	PrintError(fmt.Sprintf("Error: %v\n", message))
 	fmt.Println("")
 	PrintInfo("Presiona enter para salir...\n")

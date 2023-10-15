@@ -1,3 +1,8 @@
-github.com/cdvelop/gotools v0.0.30 h1:ddsIcAdepPST1MwY94/A55X864ALDH8xZhqNyDW+OZw=
-github.com/cdvelop/gotools v0.0.30/go.mod h1:wO5sBUePcIVJ5AWMbQrGRG237aHEDSRqd1R+rJnFYt4=
-github.com/cdvelop/model v0.0.39 h1:ddGGnPyLCW47mvFdATojRww5H+4dvjjqiFP3i9U9lMM=
+github.com/cdvelop/gotools v0.0.43 h1:6HEppsMtvWUINqvyv371wXli2bJAYXotG8GeiW5i8Pg=
+github.com/cdvelop/gotools v0.0.43/go.mod h1:MXj0A4f21pQX1bG+TcoNm6GSklYIi/2Az1O/CdzjAS8=
+github.com/cdvelop/input v0.0.26 h1:ASr1Cj+JkEj0H8CUIsYhGzmXW2TMdagSjO+nSdnbzuM=
+github.com/cdvelop/input v0.0.26/go.mod h1:Y8aRwaFsEZy7Yo75+w0iFBdjj1sCPmC7uFe7iouc7ww=
+github.com/cdvelop/model v0.0.54 h1:hjkmBwDxUsnzUgc5bPBDrY27o+PzSmiIGSDoGL7GMXQ=
+github.com/cdvelop/model v0.0.54/go.mod h1:DM3HqVbX7eN7QrUjlwYbT6658nsTylBAnwIQzOpQGTs=
+golang.org/x/text v0.12.0 h1:k+n5B8goJNdU7hSvEtMUz3d1Q6D/XW4COJSJR6fN0mc=
+golang.org/x/text v0.12.0/go.mod h1:TvPlkZtksWOMsz7fbANvkp4WM8x/WCo/om8BMLbz+aE=

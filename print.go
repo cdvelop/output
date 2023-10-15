@@ -42,17 +42,27 @@ func print(message string, options ...string) {
 	}
 }
 
-func PrintOK(message string) {
-	print(message, "ok")
+func PrintOK(messages ...string) {
+	print(joinMessages(messages...), "ok")
 }
 
-func PrintWarning(message string) {
-	print(message, "warn")
+func PrintWarning(messages ...string) {
+
+	print(joinMessages(messages...), "warn")
 }
-func PrintError(message string) {
-	print(message, "err")
+func PrintError(messages ...string) {
+	print(joinMessages(messages...), "err")
 }
 
-func PrintInfo(message string) {
-	print(message, "info")
+func PrintInfo(messages ...string) {
+	print(joinMessages(messages...), "info")
+}
+
+func joinMessages(messages ...string) (message string) {
+	var space string
+	for _, m := range messages {
+		message += space + m
+		space = " "
+	}
+	return
 }
